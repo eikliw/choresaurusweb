@@ -81,7 +81,7 @@ export default function LandingPage() {
                   <div className="h-[64px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -right-[17px] top-[142px] rounded-r-lg"></div>
                   <div className="rounded-[2rem] overflow-hidden w-[272px] h-[572px] bg-white dark:bg-gray-800">
                     <Image
-                      src="/placeholder.svg"
+                      src="/image1.png"
                       width={272}
                       height={572}
                       alt="Choresaurus app interface"
