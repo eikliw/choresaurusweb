@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: 'Choresaurus is the fun and easy way to manage family chores. Roar into responsibility with our intuitive app designed for the whole family.',
   openGraph: {
     title: 'Choresaurus - Make Chores Fun for the Whole Family',
-    description: 'Manage family chores easily with Choresaurus. Features include easy scheduling, reward systems, and family-friendly design.',
+    description: 'Manage all family chores easily with Choresaurus. Features include easy scheduling, reward systems, and family-friendly design.',
     url: 'https://www.choresaurus.com/',
     siteName: 'Choresaurus',
     images: [
