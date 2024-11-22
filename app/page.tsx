@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     siteName: 'Choresaurus',
     images: [
       {
-        url: 'https://www.choresaurus.com/og-image.jpg',
+        url: 'https://www.choresaurus.com/og-image.png',
         width: 1200,
         height: 630,
       },
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Choresaurus - The Fun Family Chore Management App',
     description: 'Manage family chores easily with Choresaurus. Features include easy scheduling, reward systems, and family-friendly design.',
-    images: ['https://www.choresaurus.com/og-image.jpg'],
+    images: ['https://www.choresaurus.com/og-image.png'],
   },
 }
 
@@ -134,7 +134,7 @@ export default function LandingPage() {
         </section>
         <section id="screenshots" className="w-full py-12 md:py-24 lg:py-32 bg-[#F9F7F4]">
           <div className="container mx-auto px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12 text-[#21C97D]">App Screenshots</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12 text-[#21C97D]">See It In Action</h2>
             <div className="flex justify-center overflow-x-auto space-x-4 pb-4">
               {[1, 2, 3, 4].map((i) => (
                 <Image
