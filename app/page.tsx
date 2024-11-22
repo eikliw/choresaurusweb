@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle2, Home, Users, Calendar, Gift, Apple } from 'lucide-react'
+import { CheckCircle2, Home, Users, Calendar, Gift } from 'lucide-react'
 import Link from "next/link"
 import Image from "next/image"
 import type { Metadata } from 'next'
@@ -67,10 +67,15 @@ export default function LandingPage() {
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 sm:flex-row">
-                  <Button className="w-full sm:w-auto bg-[#21C97D] text-white hover:bg-[#1AB06E]">
-                    <Apple className="mr-2 h-5 w-5" />
-                    Download on App Store
-                  </Button>
+                  <Link href="https://apps.apple.com/app/your-app-id" className="w-full sm:w-auto">
+                    <Image
+                      src="/app-store-badge.svg"
+                      alt="Download on the App Store"
+                      width={140}
+                      height={42}
+                      className="hover:opacity-90 transition-opacity"
+                    />
+                  </Link>
                 </div>
               </div>
               <div className="lg:pl-10 flex items-center justify-center">
@@ -218,10 +223,15 @@ export default function LandingPage() {
               <p className="max-w-[600px] text-gray-500 md:text-xl">
                 Download Choresaurus now and start making chores fun for the whole family!
               </p>
-              <Button className="w-full sm:w-auto bg-[#21C97D] text-white hover:bg-[#1AB06E]">
-                <Apple className="mr-2 h-5 w-5" />
-                Download on App Store
-              </Button>
+              <Link href="https://apps.apple.com/app/your-app-id">
+                <Image
+                  src="/app-store-badge.svg"
+                  alt="Download on the App Store"
+                  width={140}
+                  height={42}
+                  className="hover:opacity-90 transition-opacity"
+                />
+              </Link>
             </div>
           </div>
         </section>
