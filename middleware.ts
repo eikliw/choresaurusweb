@@ -1,14 +1,13 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
- 
+import { FEATURES } from '@/lib/features'
+
 export function middleware(request: NextRequest) {
-  // If the request is for the root path
-  if (request.nextUrl.pathname === '/') {
-    // Redirect to the waitlist page
+  if (request.nextUrl.pathname === '/' && FEATURES.WAITLIST_ENABLED) {
     return NextResponse.redirect(new URL('/waitlist', request.url))
   }
 }
- 
+
 export const config = {
   matcher: '/',
 }

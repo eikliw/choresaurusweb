@@ -1,14 +1,28 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Button } from "@/components/ui/button"
 import { AnimatedBackground } from '@/components/animated-background'
 import Image from 'next/image'
+import { FEATURES } from '@/lib/features'
+import { useRouter } from 'next/navigation'
 
 export default function WaitlistPage() {
+  const router = useRouter()
   const [email, setEmail] = useState('')
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
   const [message, setMessage] = useState('')
+
+  useEffect(() => {
+    if (!FEATURES.WAITLIST_ENABLED) {
+      router.replace('/')
+    }
+  }, [router])
+
+  // If waitlist is disabled, don't render the page
+  if (!FEATURES.WAITLIST_ENABLED) {
+    return null
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
