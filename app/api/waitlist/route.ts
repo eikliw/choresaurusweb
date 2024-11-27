@@ -4,11 +4,17 @@ const API_KEY = process.env.EMAIL_OCTOPUS_API_KEY
 const LIST_ID = process.env.EMAIL_OCTOPUS_LIST_ID
 
 if (!API_KEY) {
-  throw new Error('Missing EMAIL_OCTOPUS_API_KEY environment variable')
+  console.error('EMAIL_OCTOPUS_API_KEY is not set in environment variables')
+  throw new Error(
+    'Missing EMAIL_OCTOPUS_API_KEY. Please set this in your Vercel environment variables.'
+  )
 }
 
 if (!LIST_ID) {
-  throw new Error('Missing EMAIL_OCTOPUS_LIST_ID environment variable')
+  console.error('EMAIL_OCTOPUS_LIST_ID is not set in environment variables')
+  throw new Error(
+    'Missing EMAIL_OCTOPUS_LIST_ID. Please set this in your Vercel environment variables.'
+  )
 }
 
 export async function POST(request: Request) {
